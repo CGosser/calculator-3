@@ -31,9 +31,16 @@ $(document).ready(function() {
   //   $("#story").show();
   // });
 
+
+
+
+
   var numInput = $( "#numInput" );
-  var firstInput = 0
-  var secondInput = 0
+  var firstInput = "";
+  var secondInput = "";
+  var operator = "";
+  // var inputs = []
+
 $("#one").click(function(){
 numInput.val( numInput.val() + "1" );
 })
@@ -64,16 +71,62 @@ numInput.val( numInput.val() + "9" );
 $("#zero").click(function(){
 numInput.val( numInput.val() + "0" );
 })
-$("#plus").click(function(){
-  var firstInput = parseInt(numInput.val());
-  numInput.val("");
-  var operator = "plus";
-  console.log(firstInput);
-  console.log(operator);
+$("#decimal").click(function(){
+numInput.val( numInput.val() + "." );
 })
-$("#equals").click(function(){
-  console.log(firstInput);
-  var secondInput = parseInt(numInput.val());
-  numInput.val(add(firstInput,secondInput));
+$("#plus").click(function(){
+  operator = "plus";
+  firstInput = (parseFloat(numInput.val()));
+  numInput.val("");
+  // inputs.push(parseFloat(numInput.val()));
+})
+$("#minus").click(function(){
+  operator = "minus";
+  firstInput = (parseFloat(numInput.val()));
+  numInput.val("");
+  // inputs.push(parseFloat(numInput.val()));
+})
+$("#divide").click(function(){
+  operator = "divide";
+  firstInput = (parseFloat(numInput.val()));
+  numInput.val("");
+  // inputs.push(parseFloat(numInput.val()));
+})
+$("#times").click(function(){
+  operator = "times";
+  firstInput = (parseFloat(numInput.val()));
+  numInput.val("");
+  // inputs.push(parseFloat(numInput.val()));
 });
+$("#equals").click(function(){
+  secondInput = (parseFloat(numInput.val()));
+  if(operator == "plus") {
+  numInput.val(add(firstInput,secondInput));
+} else if(operator == "minus") {
+    numInput.val(subtract(firstInput,secondInput));
+} else if(operator == "times") {
+    numInput.val(multiply(firstInput,secondInput));
+}else if(operator == "divide") {
+    numInput.val(divide(firstInput,secondInput));
+}
+
+
+// console.log("1");
+//   $(".btn-outline-primary").click(function(){
+//     numInput.val("");
+//     numInput.val( numInput.val() + "1" );
+//     console.log("2");
+//     return;
+//   })
+// console.log("3");
+  // inputs = []
+  // inputs.push(parseFloat(numInput.val()));
+  // console.log(inputs);
+});
+
+$("#clear").click(function(){
+  numInput.val("");
+  inputs = []
+});
+
 });
