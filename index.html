@@ -4,11 +4,110 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scipts.js"></script>
+    <script src="js/scripts.js"></script>
     <meta charset="utf-8">
-    <title></title>
+    <title>Calculator</title>
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-5">
+        </div>
+        <div class="col-xl-2" id="column">
+          <div class="row">
+            <!-- input -->
+            <form id="formOne">
+              <div class="form-group">
+                <!-- <label for="person1"></label> -->
+                <input id="numInput" class="form-control" type="text">
+              </div>
 
+            </div>
+            <div class="row">
+              <div class="col-xl-9">
+                <!-- clear -->
+                <button type="button" class="btn btn-outline-dark" id="clear">Clear</button>
+              </div>
+              <div class="col-xl-3">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-3">
+                <!-- 7 -->
+                <button type="button" id="seven" class="btn btn-outline-primary">7</button>
+              </div>
+              <div class="col-xl-3">
+                <!-- 8 -->
+                <button type="button" id="eight" class="btn btn-outline-primary">8</button>
+              </div>
+              <div class="col-xl-3">
+                <!-- 9 -->
+                <button type="button" id="nine"class="btn btn-outline-primary">9</button>
+              </div>
+              <div class="col-xl-3">
+                <!-- + -->
+                <button type="button" id="plus"class="btn btn-outline-danger">+</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-3">
+                <!-- 4 -->
+                <button type="button" id="four"class="btn btn-outline-primary">4</button>
+              </div>
+              <div class="col-xl-3">
+                <!-- 5 -->
+                <button type="button" id="five"class="btn btn-outline-primary">5</button>
+              </div>
+              <div class="col-xl-3">
+                <!-- 6 -->
+                <button type="button" id="six"class="btn btn-outline-primary">6</button>
+              </div>
+              <div class="col-xl-3">
+                <!-- - -->
+                <button type="button" id="minus"class="btn btn-outline-info">	&#8722;</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-3">
+                <!-- 1 -->
+                <button type="button" id="one"class="btn btn-outline-primary">1</button>
+              </div>
+              <div class="col-xl-3">
+                <!-- 2 -->
+                <button type="button" id="two"class="btn btn-outline-primary">2</button>
+              </div>
+              <div class="col-xl-3">
+                <!-- 3 -->
+                <button type="button" id="three"class="btn btn-outline-primary">3</button>
+              </div>
+              <div class="col-xl-3">
+                <!-- X -->
+                <button type="button" id="times"class="btn btn-outline-warning">&#215;</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-3">
+                <!-- 0 -->
+                <button type="button" id="zero"class="btn btn-outline-primary">0</button>
+              </div>
+              <div class="col-xl-3">
+                <!-- . -->
+                <button type="button" id="decimal"class="btn btn-outline-primary">.</button>
+              </div>
+              <div class="col-xl-3">
+                <!-- = -->
+                <button type="button" id="equals"class="btn btn-outline-primary">=</button>
+              </div>
+              <div class="col-xl-3">
+                <!-- / -->
+                <button type="button" id="divide"class="btn btn-outline-success">&#247;</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- <div class="col-xl-4"> -->
+        <!-- </div> -->
+      </div>
+    </div>
   </body>
 </html>
